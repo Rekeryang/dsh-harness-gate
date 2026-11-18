@@ -1,0 +1,6 @@
+# dsh-harness-gate 的 bundle patch 层。
+# package.json 的 `dsh.bundle.patch` 指向本文件：DSH loader 会把它插进 profile 组合树。
+# `name` 必须与安装的包名一致，否则 loader 只 warn 然后跳过 → 插件"装了但没生效"。
+- insert:
+    - id: dsh-harness-gate
+      name: dsh-harness-gate

@@ -1,0 +1,61 @@
+{
+  "name": "dsh-harness-gate",
+  "version": "0.1.0",
+  "description": "DEEPSEEK HARNESS 生物识别登录门禁：外星文明 HUD 风格的全屏刷脸 + 语音确认登录界面。真实摄像头、MediaPipe 478 点面部/虹膜检测、本地零依赖推理。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "runtime",
+    "vendor",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "DeepSeek Harness Gate Contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rekeryang/dsh-harness-gate.git"
+  },
+  "homepage": "https://github.com/Rekeryang/dsh-harness-gate#readme",
+  "bugs": {
+    "url": "https://github.com/Rekeryang/dsh-harness-gate/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "biometric",
+    "face-recognition",
+    "iris",
+    "login",
+    "gate",
+    "mediapipe"
+  ],
+  "scripts": {
+    "check": "node scripts/check-syntax.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}
